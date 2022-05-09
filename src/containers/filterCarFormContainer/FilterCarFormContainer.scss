@@ -1,0 +1,184 @@
+.filterCarForm {
+
+    .checkBoxArea {
+        display: flex;
+        flex-direction: row;
+        padding: 10px 0px;
+        margin-left: 6px;
+    }
+
+    .areaOne {
+        display: flex;
+        flex-direction: row;
+
+        .selectsOne {
+            display: flex;
+            width: 50%;
+
+            .select-wrap {
+                width: 100%;
+
+                &.stateSelect{
+                    width: 60%;
+                    margin: 5px 0px 5px 5px;
+                    border-radius: 4px 0px 0px 4px;
+                    
+                    @media (max-width: 430px) {
+                        width: auto;
+                        margin: 5px;
+                        border-radius: 4px
+                    }
+                }
+
+                &.kmSelect{
+                    width: 40%;
+                    margin: 5px 5px 5px 0px;
+                    border-radius: 0px 4px 4px 0px;
+
+                    @media (max-width: 430px) {
+                        width: auto;
+                        margin: 5px;
+                        border-radius: 4px
+                    }
+                }
+            }
+        }
+
+        .selectsOne.make.model{
+            .select-wrap {
+                margin: 5px;
+                border-radius: 4px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            flex-direction: column;
+
+            .selectsOne {
+                width: 100%;
+                flex-direction: column;
+
+                .select-wrap {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .areaTwo {
+        display: flex;
+        flex-direction: row;
+
+        .selectsTwo {
+            display: flex;
+            width: 100%;
+
+            .select-wrap {
+                width: 100%;
+                margin: 5px;
+                border-radius: 4px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            flex-direction: column-reverse;
+
+            .selectsTwo {
+                width: 100%;
+                flex-direction: column;
+
+                .select-wrap {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .buttonsArea {
+        display: flex;
+        flex-direction: row;
+
+        .buttonsAreaOne {
+            width: 50%;
+        }
+
+        .buttonsAreaTwo {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            justify-content: space-between;
+            margin: 15px 10px;
+            
+            .clearFilter{
+                color: #999898;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 14px;
+                margin-left: 10px;
+                
+                &:hover{
+                    color: #ca2430;
+                }
+            }
+
+            .confirmSearch{
+                width: 275px;
+                height: 40px;
+                background-color: #ca2430;
+                border-radius: 2px;
+                border: none;
+                color: white;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+            .confirmSearch:active {
+                background-color: #c7444d;
+                transform: translateY(1px);
+              }
+        }
+
+        @media (max-width: 430px) {
+            flex-direction: column;
+
+            .buttonsAreaOne {
+                width: 100%;
+            }
+
+            .buttonsAreaTwo {
+                display: flex;
+                width: 100%;
+                flex-direction: column-reverse;
+
+                .clearFilter{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+
+    .containerCardsCars{
+        margin-top: 20px;
+        background-color: #f4f4f4;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        .card {
+            flex: 0 1 22%;
+            padding: 4px;
+            margin: 8px;
+        }
+
+        @media (max-width: 430px) {
+            .card {
+                flex: 0 1 99%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
